@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<titlejQuery Simple Slider plugin DEMO</title>
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.simpleslider.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css" media="screen">
+
+		* { margin: 0; padding: 0; }
+
+		body {
+			font-family: sans-serif;
+			color: #222;
+			padding: 50px;
+		}
+		
+		ul { list-style: none; }
+
+		.mask { 
+			width: 100px;
+			height: 100px;
+			position: relative;
+			outline: 1px solid red;
+			overflow: hidden;
+		}
+
+		.content {
+			height: 100px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.content li {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			float: left;
+			background: #ccc;
+		}
+
+		.controls {
+			width: 100px;
+			margin-top: 1em;
+		}
+		
+		.controls li {
+			display: inline;
+		}
+		
+		.controls li a {
+			width: 20px;
+			height: 20px;
+			background: #ccc;
+			color: #666;
+			margin: 0 5px 0 0;
+			text-decoration: none;
+			font-size: 0.9em;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			display: block;
+			float: left;
+			border-radius: 1em;
+			text-align: center;
+			
+		}
+
+		</style>
+		<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$('.simpleslider').simpleslider({
+					"controls"           : $('.controls'),
+					"content"            : '.content',
+					"transitionDuration" : 500
+			});
+		});
+
+		</script>
+	</head>
+	<body>
+		<div class="simpleslider">
+			<div class="mask">
+				<ul class="content">
+					<li>Foo</li>
+					<li style="width:300px; background: #0c0;">Bar</li>
+					<li>Baz</li>
+				</ul>
+			</div>
+			<ul class="controls">
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+			</ul>
+		</div>
+	</body>
+</html>
