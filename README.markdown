@@ -7,9 +7,9 @@ Check out the [demo here](http://www.polarblau.com/code/jquery/simpleslider).
 	
 Settings and defaults
 	$('.simpleslider').simpleslider({
-			"controls"           : $('.controls'),
-			"content"            : '.content',
-			"transitionDuration" : 500
+			"controls"           : $('.controls'),   // selector or jquery object
+			"content"            : '.content',       // selector or jquery object
+			"transitionDuration" : 500               // duration in ms
 	});
 	
 	
