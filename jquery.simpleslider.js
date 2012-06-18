@@ -6,18 +6,18 @@
  * and GPL (GPL-LICENSE.txt) licenses.
  *
  * USAGE:
- * 
+ *
  * $('.simpleslider').simpleslider({
  *   "controls"           : $('.controls'),   // selector or jquery object
  *   "content"            : '.content',       // selector or jquery object
  *   "transitionDuration" : 500               // duration in ms
  * });
- * 
+ *
  */
 
 (function($) {
 	$.fn.simpleslider = function(options) {
-		
+
 		// defaults
 		var settings = $.merge({
 			"controls": '.controls',
@@ -42,7 +42,7 @@
 			$content.css('width', contentWidth + 'px');
 
 			$controls.click(function() {
-				// determine offset 
+				// determine offset
 				var controlIndex = $(this).index(),
 					offset = (function(s) {
 					var w = 0; $.each(s, function(k, e) { w += e; }); return w;
@@ -55,6 +55,6 @@
 				return false;
 			});
 		});
-		
+
 	};
 })(jQuery);
